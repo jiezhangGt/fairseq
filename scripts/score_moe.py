@@ -99,7 +99,7 @@ def merge(src, tgt, hypos, log_probs, path):
             f.write(t + '\n')
             f.write('\n')
             for h, lp in zip(hs, lps):
-                f.write('%f\t' % lp + h)
+                f.write('\t%f\t%s\n' % (lp, h.strip()))
             f.write('------------------------------------------------------\n')
 
 
